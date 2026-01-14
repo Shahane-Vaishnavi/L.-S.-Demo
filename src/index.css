@@ -1,10 +1,21 @@
+/* 🌈 GLOBAL THEME COLORS
+   -------------------------
+   White       : #ffffff
+   Sky Blue    : #7dd3fc
+   Dark Blue   : #1e3a8a
+   Light Pink  : #fbcfe8
+   SOS Red     : #ef4444
+*/
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #7b2ff7, #f107a3);
-  color: white;
+  background: linear-gradient(135deg, #7dd3fc, #1e3a8a);
+  color: #ffffff;
+  min-height: 100vh;
 }
 
+/* Centered Screen Wrapper */
 .screen {
   min-height: 100vh;
   display: flex;
@@ -14,34 +25,80 @@ body {
   padding: 20px;
 }
 
+/* Glassmorphism Card */
 .card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px);
   padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: #1e3a8a;
 }
 
+/* Inputs */
 input {
   padding: 12px;
   width: 100%;
   border-radius: 10px;
-  border: none;
-  margin-top: 10px;
+  border: 1px solid #7dd3fc;
+  margin-top: 12px;
+  outline: none;
 }
 
+/* Buttons */
 button {
   width: 100%;
   padding: 14px;
   border: none;
   border-radius: 10px;
-  background: #ff78c4;
+  background: #1e3a8a;  /* dark blue */
   color: white;
   font-size: 1rem;
   margin-top: 15px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.85;
+  background: #152c6b;
+}
+
+/* Light Pink Accent Buttons */
+.btn-pink {
+  background: #fbcfe8;
+  color: #1e3a8a;
+}
+.btn-pink:hover {
+  background: #f9a8d4;
+}
+
+/* Sky Blue Buttons */
+.btn-sky {
+  background: #7dd3fc;
+  color: #1e3a8a;
+}
+.btn-sky:hover {
+  background: #38bdf8;
+}
+
+/* SOS BUTTON */
+.sos-btn {
+  background: #ef4444;
+  color: white;
+  width: 150px;
+  height: 150px;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  animation: pulse 1.4s infinite;
+}
+
+/* SOS Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+  50% { transform: scale(1.08); box-shadow: 0 0 30px rgba(239, 68, 68, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
 }
